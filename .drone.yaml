@@ -1,0 +1,19 @@
+---
+kind: pipeline
+type: kubernetes
+name: default
+
+steps:
+- name: build & push docker image
+  image: plugins/docker
+  when:
+    event:
+    - tag
+  settings:
+    username: drone
+    password:
+      from_secret: cr_password
+    registry: cr.grechka.family
+    repo: cr.grechka.family/socat
+    auto_tag: true
+    force_tag: true
