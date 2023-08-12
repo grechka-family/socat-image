@@ -33,3 +33,6 @@ steps:
     repo: cr.grechka.family/socat
     auto_tag: true
     force_tag: true
+---
+kind: signature
+hmac: f7a3b087079e9ed26fb984beaae5ea68d78434d12df11388119d377b7d93d4df
